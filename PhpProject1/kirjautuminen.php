@@ -4,7 +4,7 @@ include_once"ylaosa.php";
    <body>
         <div>
             <h1>Fuksin Juomalaskuri</h1>
-            <a href="rekisterointi.html">Luo uusi tunnus</a>
+            <a href="rekisteroituminen.php">Luo uusi tunnus</a>
             <h2>Kirjautuminen</h2>
         </div>
         <form action="kirjaudu.php" method="POST">

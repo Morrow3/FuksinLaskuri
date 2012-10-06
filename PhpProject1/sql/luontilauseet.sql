@@ -1,8 +1,6 @@
 --Käyttäjätaulu
 CREATE TABLE kayttajat (
 id serial PRIMARY KEY,
-enimi varchar,
-snimi varchar,
 ktunnus varchar UNIQUE
 ssana varchar,
 sposti varchar UNIQUE,
