@@ -3,6 +3,7 @@ CREATE TABLE kayttajat (
 id serial PRIMARY KEY,
 enimi varchar,
 snimi varchar,
+ktunnus varchar UNIQUE
 ssana varchar,
 sposti varchar UNIQUE,
 on_admin boolean DEFAULT FALSE
