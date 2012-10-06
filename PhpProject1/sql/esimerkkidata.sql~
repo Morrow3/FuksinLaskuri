@@ -1,0 +1,4 @@
+--Lisätään käyttäjiä
+INSERT INTO kayttajat (ktunnus, sposti, ssana) VALUES
+('joni', 'joni@joni.fi', 'joni'),
+('testi', 'testi@testi.fi', 'testi')

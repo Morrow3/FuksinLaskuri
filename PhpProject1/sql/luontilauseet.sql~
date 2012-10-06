@@ -11,7 +11,6 @@ on_admin boolean DEFAULT FALSE
 CREATE TABLE juomat (
 id serial PRIMARY KEY,
 kayttaja_id integer REFERENCES kayttajat(id) ON DELETE CASCADE,
-juoman_tyyppi varchar,
 juoman_maara integer,
 milloin_juotu timestamp,
 missa_juotu varchar,
