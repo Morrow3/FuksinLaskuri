@@ -1,4 +1,5 @@
 <?php
+$otsikko = 'Kirjautuminen';
 include_once"ylaosa.php";
 ?>
    <body>

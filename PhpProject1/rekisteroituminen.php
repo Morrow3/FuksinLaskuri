@@ -1,5 +1,6 @@
 <?php
 include_once 'ylaosa.php';
+$otsikko = 'Rekisteröityminen';
 ?>
 
     <body>

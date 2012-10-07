@@ -1,8 +1,7 @@
-<?php
-echo '<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Kirjautuminen</title>
+        <title> <?php echo $otsikko ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>';
-?>
+    </head>

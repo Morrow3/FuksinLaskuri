@@ -1,6 +1,8 @@
 <?php
 include_once 'ylaosa.php';
+$otsikko = 'Valikkosivu';
 ?>
+
    <body>
         <div>
             <h1>Valikko</h1>
@@ -12,6 +14,6 @@ include_once 'ylaosa.php';
         <a href="uusijuoma.php">Paina tästä! (väliaikainen, tähän button?)</a>
         <br>
         <p>Juomien listaaminen:</p>
-        <a href="listaa.php">Paina tästä! (Tulee dynaaminen sivu, tähän button?)</a>
+        <a href="listaus.php">Paina tästä! (Tulee dynaaminen sivu, tähän button?)</a>
     </body>
 </html>

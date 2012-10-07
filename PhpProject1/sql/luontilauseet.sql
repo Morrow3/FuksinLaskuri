@@ -1,7 +1,7 @@
 --Käyttäjätaulu
 CREATE TABLE kayttajat (
 id serial PRIMARY KEY,
-ktunnus varchar UNIQUE
+ktunnus varchar UNIQUE,
 ssana varchar,
 sposti varchar UNIQUE,
 on_admin boolean DEFAULT FALSE
@@ -16,5 +16,5 @@ juoman_maara integer,
 milloin_juotu timestamp,
 missa_juotu varchar,
 mita_juotu varchar,
-juoman_hinta decimal,
+juoman_hinta decimal
 );

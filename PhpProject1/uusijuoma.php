@@ -12,7 +12,7 @@ include_once 'ylaosa.php';
             <label>Juoman tyyppi:</label>
             <input type="radio" name="tyyppi" value="shotti"/>Shotti
             <input type="radio" name="tyyppi" value ="tuoppi"/>Tuoppi
-            <input type="radio" name="tyyppi" value="viini"/>Viini 12cl
+            <input type="radio" name="tyyppi" value="viini"/>Viini
             <input type="radio" name="tyyppi" value="likoori"/>Likööri tai väkevä viini<br />
             
             <label>Missä:</label>
