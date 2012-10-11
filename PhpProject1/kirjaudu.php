@@ -5,6 +5,7 @@ require 'kyselyt.php';
 $kysely = $kyselija->tunnista($_POST['ktunnus'],$_POST['ssana']);
 if($kysely)
 {
+    $sessio->kayttaja_id = $kysely->id;
     header("Location:valikkosivu.php");
 }
 else
