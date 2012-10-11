@@ -17,7 +17,5 @@ include_once"ylaosa.php";
             <br>
             <input type="submit" value="Submit"/>
         </form>
-        <a href="valikkosivu.php">Tästä valikkosivulle... (väliaikainen linkki)</a>
-        
     </body>
 </html>

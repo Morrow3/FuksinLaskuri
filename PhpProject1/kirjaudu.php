@@ -1,6 +1,7 @@
 <?php
 require 'ylaosa.php';
-require 'kyselyt.php';
+require_once 'avusteet.php';
+require_once 'kyselyt.php';
 
 $kysely = $kyselija->tunnista($_POST['ktunnus'],$_POST['ssana']);
 if($kysely)

@@ -1,6 +1,10 @@
 <?php
 include_once 'ylaosa.php';
+require_once 'avusteet.php';
 $otsikko = 'Valikkosivu';
+$id = $_GET['kayttaja'];
+
+varmista();
 ?>
 
    <body>
@@ -11,9 +15,9 @@ $otsikko = 'Valikkosivu';
             <h2>Valitse toiminto:</h2>
         </div>
         <p>Uuden juoman lisääminen:</p>
-        <a href="uusijuoma.php">Paina tästä! (väliaikainen, tähän button?)</a>
+        <a href="uusijuoma.php">Paina tästä!</a>
         <br>
         <p>Juomien listaaminen:</p>
-        <a href="listaus.php">Paina tästä! (Tulee dynaaminen sivu, tähän button?)</a>
+        <a <?php echo "href=listaus.php?kayttaja=" . "$id"; ?> >Paina tästä!</a>
     </body>
 </html>
