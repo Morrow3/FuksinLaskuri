@@ -26,7 +26,7 @@ varmista();
             <br />
             
             <label>Määrä:</label>
-            <input type="text" name="maara"/>
+            <input type="number" name="maara"/>
             <br />
             
             <input type="submit" name="Submit"/>
