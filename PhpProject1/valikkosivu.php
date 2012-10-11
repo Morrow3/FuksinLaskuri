@@ -2,7 +2,6 @@
 include_once 'ylaosa.php';
 require_once 'avusteet.php';
 $otsikko = 'Valikkosivu';
-$id = $_GET['kayttaja'];
 
 varmista();
 ?>
@@ -18,6 +17,6 @@ varmista();
         <a href="uusijuoma.php">Paina tästä!</a>
         <br>
         <p>Juomien listaaminen:</p>
-        <a <?php echo "href=listaus.php?kayttaja=" . "$id"; ?> >Paina tästä!</a>
+        <a href="listaus.php">Paina tästä!</a>
     </body>
 </html>

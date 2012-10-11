@@ -2,11 +2,11 @@
 require_once 'ylaosa.php';
 require_once 'kyselyt.php';
 require_once 'avusteet.php';
+$otsikko = 'Juomien listaus';
 
 
-//$sessio->kayttajan_id = $_GET['kayttaja'];
 varmista();
-$tunnari = $_GET['kayttaja'];
+$tunnari = $sessio->kayttajan_id;
 $lista = $kyselija->listaa_juomat($tunnari);
 
 ?>
