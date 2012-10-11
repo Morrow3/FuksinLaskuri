@@ -14,7 +14,10 @@ catch (PDOException $e)
 =======
     $pdo = new PDO("pgsql:host=localhost; dbname=jhauhia", 
             "jhauhia", "xxxx");    
+<<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/Morrow3/FuksinLaskuri.git
+=======
+>>>>>>> e7a00e73aefb880d79a4a3792e0aeacd662bb348
 }
 //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
