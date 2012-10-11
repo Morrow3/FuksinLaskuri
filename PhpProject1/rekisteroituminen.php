@@ -1,6 +1,6 @@
 <?php
-include_once 'ylaosa.php';
 $otsikko = 'Rekisteröityminen';
+include_once 'ylaosa.php';
 ?>
 
     <body>

@@ -1,11 +1,15 @@
 <?php
+$user = "jhauhia";
+$database = "jhauhia";
+$password = "571f9d229df5a03f";
+
 try
 {
-    $pdo = new PDO("pgsql:host=localhost; dbname=jhauhia", 
-            "jhauhia", "71f9d229df5a03f");    
+    $pdo = new PDO("pgsql:host=localhost;dbname=$database", "$user", "$password");
+} 
+catch (PDOException $e) 
+{
+    die("VIRHE! " . $e->getMessage());
 }
- catch (PDOException $e)
- {
-     die("Ei saatu yhteyttä: " . $e.getMessage());
- }
+//$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
