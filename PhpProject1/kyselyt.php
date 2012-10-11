@@ -52,6 +52,14 @@ class Kyselyt
         
     }
     
+    public function lisaa_juoma($kayttaja_id, $tyyppi, $maara, $missa, $hinta)
+    {
+        $kysely = $this->valmistele("INSERT INTO juomat (kayttaja_id, juoman_tyyppi, missa_juotu, juoman_hinta)
+            VALUES (:kayttaja_id,:juoman_tyyppi,:juoman_maara, :missa_juotu, :juoman_hinta)");
+        $kysely->execute(array('kayttaja_id'=>$kayttaja_id,'juoman_tyyppi'=>$tyyppi,
+            'juoman_maara'=>$maara, 'missa_juotu'=>$missa, 'juoman_hinta'=>$hinta ));
+    }
+    
     public function listaa_juomat($tunnus)
     {
         $kysely = $this->valmistele("SELECT * FROM juomat WHERE kayttaja_id = ?");
@@ -63,9 +71,7 @@ class Kyselyt
         echo "<td>" . $rivi["kayttaja_id"] . "</td>";
         echo "<td>" . $rivi["juoman_tyyppi"] . "</td>";
         echo "<td>" . $rivi["juoman_maara"] . "</td>";
-        echo "<td>" . $rivi["milloin_juotu"] . "</td>";
         echo "<td>" . $rivi["missa_juotu"] . "</td>";
-        echo "<td>" . $rivi["mita_juotu"] . "</td>";
         echo "<td>" . $rivi["juoman_hinta"] . "</td>";
         echo "</tr>"; 
         }
