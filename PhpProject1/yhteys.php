@@ -1,7 +1,7 @@
 <?php
 $user = "jhauhia";
 $database = "jhauhia";
-$password = "571f9d229df5a03f";
+$password = ""
 
 try
 {
