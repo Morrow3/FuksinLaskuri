@@ -9,8 +9,8 @@ varmista();
    <body>
         <div>
             <h1>Valikko</h1>
-            <a href="kirjautuminen.php">Kirjaudu ulos (väliaikainen linkki)</a>
-            <a href="poisto.php">Poista tunnukset (väliaikainen linkki)</a>
+            <a href="uloskirjaus.php">Kirjaudu ulos</a>
+            <a href="poisto.php">Poista tunnukset</a>
             <h2>Valitse toiminto:</h2>
         </div>
         <p>Uuden juoman lisääminen:</p>
