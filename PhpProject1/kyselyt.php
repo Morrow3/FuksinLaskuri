@@ -56,8 +56,8 @@ class Kyselyt
     {
         $kysely = $this->valmistele("INSERT INTO juomat (kayttaja_id, juoman_tyyppi, juoman_maara, missa_juotu, juoman_hinta)
             VALUES (:kayttaja_id,:juoman_tyyppi,:juoman_maara, :missa_juotu, :juoman_hinta)");
-        $kysely->execute(array('kayttaja_id'=>$kayttaja_id,'juoman_tyyppi'=>$tyyppi,
-            'juoman_maara'=>$maara, 'missa_juotu'=>$missa, 'juoman_hinta'=>$hinta ));
+        $kysely->execute(array(':kayttaja_id'=>$kayttaja_id,':juoman_tyyppi'=>$tyyppi,
+            ':juoman_maara'=>$maara, ':missa_juotu'=>$missa, ':juoman_hinta'=>$hinta ));
     }
     
     public function listaa_juomat($tunnus)
