@@ -1,6 +1,7 @@
 <?php
 include_once 'ylaosa.php';
 require_once 'avusteet.php';
+$otsikko="Lisää juoma";
 varmista();
 
 ?>
