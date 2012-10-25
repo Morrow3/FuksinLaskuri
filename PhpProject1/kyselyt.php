@@ -36,6 +36,10 @@ class Kyselyt
         $kysely->execute();
 
         echo "<table border>";
+        echo "<tr>";
+        echo "<th> Käyttäjätunnus </th>";
+        echo "<th> Sähköpostios. </th>";
+        echo "</tr>";
         while ($rivi = $kysely->fetch()) {
         echo "<tr>";
         echo "<td>" . $rivi["ktunnus"] . "</td>";
@@ -66,6 +70,13 @@ class Kyselyt
         $kysely->execute(array($tunnus));
  
         echo "<table border>";
+        echo "<tr>";
+        echo "<th> käyttäjä nro. </th>";
+        echo "<th> Juoman tyyppi </th>";
+        echo "<th> Juoman määrä </th>";
+        echo "<th> Missä juotu </th>";
+        echo "<th> Hinta </th>";
+        echo "</tr>";
         while ($rivi = $kysely->fetch()) {
         echo "<tr>";
         echo "<td>" . $rivi["kayttaja_id"] . "</td>";
