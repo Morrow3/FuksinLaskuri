@@ -15,6 +15,7 @@ class Kyselyt
         return $this->_pdo->prepare($dblause);
     }
     
+    //Tietokantakysely, jolla tunnistetaan käyttäjä.
     public function tunnista($tunnus,$ssana)
     {
         $kysely = $this->valmistele("SELECT id FROM kayttajat WHERE ktunnus = ? AND ssana = ?");
@@ -30,6 +31,7 @@ class Kyselyt
     }
 
 
+    //Listaa käyttäjät id-numeron mukaan.
     public function listaa_kayttajat()
     {
         $kysely = $this->valmistele("SELECT * FROM kayttajat");
@@ -49,21 +51,23 @@ class Kyselyt
         echo "</table>";
     }
     
+    //Lisää uuden käyttäjän
     public function lisaa_kayttaja($ktunnus, $ssana, $sposti)
     {
         $kysely = $this->valmistele("INSERT INTO kayttajat (ktunnus,ssana,sposti) VALUES(:ktunnus,:ssana,:sposti)");
         $kysely->execute(array(':ktunnus'=>$ktunnus, ':ssana'=>$ssana, ':sposti'=>$sposti));
         
     }
-    
-    public function lisaa_juoma($kayttaja_id, $tyyppi, $maara, $missa, $hinta)
+    //Lisää uuden juoman
+    public function lisaa_juoma($kayttaja_id, $tyyppi, $maara, $monelta, $missa, $hinta)
     {
-        $kysely = $this->valmistele("INSERT INTO juomat (kayttaja_id, juoman_tyyppi, juoman_maara, missa_juotu, juoman_hinta)
-            VALUES (:kayttaja_id,:juoman_tyyppi,:juoman_maara, :missa_juotu, :juoman_hinta)");
+        $kysely = $this->valmistele("INSERT INTO juomat (kayttaja_id, juoman_tyyppi, juoman_maara, milloin_juotu, missa_juotu, juoman_hinta)
+            VALUES (:kayttaja_id,:juoman_tyyppi, :juoman_maara, :milloin_juotu, :missa_juotu, :juoman_hinta)");
         $kysely->execute(array(':kayttaja_id'=>$kayttaja_id,':juoman_tyyppi'=>$tyyppi,
-            ':juoman_maara'=>$maara, ':missa_juotu'=>$missa, ':juoman_hinta'=>$hinta ));
+            ':juoman_maara'=>$maara, ':milloin_juotu'=>$monelta , ':missa_juotu'=>$missa, ':juoman_hinta'=>$hinta ));
     }
     
+    //Listaa juodut juomat id-numeron perusteella.
     public function listaa_juomat($tunnus)
     {
         $kysely = $this->valmistele("SELECT * FROM juomat WHERE kayttaja_id = ?");
@@ -74,6 +78,7 @@ class Kyselyt
         echo "<th> käyttäjä nro. </th>";
         echo "<th> Juoman tyyppi </th>";
         echo "<th> Juoman määrä </th>";
+        echo "<th> Milloin juotu </th>";
         echo "<th> Missä juotu </th>";
         echo "<th> Hinta </th>";
         echo "</tr>";
@@ -82,6 +87,7 @@ class Kyselyt
         echo "<td>" . $rivi["kayttaja_id"] . "</td>";
         echo "<td>" . $rivi["juoman_tyyppi"] . "</td>";
         echo "<td>" . $rivi["juoman_maara"] . "</td>";
+        echo "<td>" . $rivi["milloin_juotu"] . "</td>";
         echo "<td>" . $rivi["missa_juotu"] . "</td>";
         echo "<td>" . $rivi["juoman_hinta"] . "</td>";
         echo "</tr>"; 
@@ -92,6 +98,6 @@ class Kyselyt
 
 
 
-
+//Luo uuden Kyselyn kts. __construct.
 $kyselija = new Kyselyt($pdo);
 ?>
