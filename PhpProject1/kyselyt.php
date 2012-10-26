@@ -81,8 +81,10 @@ class Kyselyt
         echo "<th> Milloin juotu </th>";
         echo "<th> Missä juotu </th>";
         echo "<th> Hinta </th>";
+        echo "<th> Poista </th>";
         echo "</tr>";
         while ($rivi = $kysely->fetch()) {
+            $id = $rivi['id'];
         echo "<tr>";
         echo "<td>" . $rivi["kayttaja_id"] . "</td>";
         echo "<td>" . $rivi["juoman_tyyppi"] . "</td>";
@@ -90,6 +92,7 @@ class Kyselyt
         echo "<td>" . $rivi["milloin_juotu"] . "</td>";
         echo "<td>" . $rivi["missa_juotu"] . "</td>";
         echo "<td>" . $rivi["juoman_hinta"] . "</td>";
+        echo "<td>" . "<a href='poistatuote.php?id=".$id."'>[poista]</a></td>";
         echo "</tr>"; 
         }
         echo "</table>";

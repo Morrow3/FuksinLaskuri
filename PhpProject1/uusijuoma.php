@@ -17,7 +17,7 @@ varmista();
             <input type="radio" name="tyyppi" value="shotti"/>Shotti
             <input type="radio" name="tyyppi" value ="tuoppi"/>Tuoppi
             <input type="radio" name="tyyppi" value="viini"/>Viini
-            <input type="radio" name="tyyppi" value="likoori"/>Likööri tai väkevä viini<br />
+            <input type="radio" name="tyyppi" value="likööri"/>Likööri tai väkevä viini<br />
             
             <label>Missä:</label>
             <input type="text" name="missa"/>
