@@ -13,8 +13,8 @@ id serial PRIMARY KEY,
 kayttaja_id integer REFERENCES kayttajat(id) ON DELETE CASCADE,
 juoman_tyyppi varchar,
 juoman_maara integer,
-milloin_juotu timestamp,
+milloin_juotu varchar,
 missa_juotu varchar,
 mita_juotu varchar,
-juoman_hinta decimal
+juoman_hinta numeric 6,2
 );
