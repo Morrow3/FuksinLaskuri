@@ -10,7 +10,6 @@ varmista();
         <div>
             <h1>Valikko</h1>
             <a href="uloskirjaus.php">Kirjaudu ulos</a>
-            <a href="poisto.php">Poista tunnukset</a>
             <h2>Valitse toiminto:</h2>
         </div>
         <p>Uuden juoman lisääminen:</p>

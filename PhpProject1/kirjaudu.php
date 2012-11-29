@@ -3,6 +3,7 @@ require 'ylaosa.php';
 require_once 'avusteet.php';
 require_once 'kyselyt.php';
 
+
 $kysely = $kyselija->tunnista($_POST['ktunnus'],$_POST['ssana']);
 if($kysely)
 {
@@ -11,7 +12,9 @@ if($kysely)
 }
 else
 {
-    header("Location:kirjautuminen.php");
+    die("Väärä salasana tai käyttäjätunnus.".
+            "<br>"."<a href='kirjautuminen.php'>Takaisin</a>");
+
 }
 ?>
 </body>

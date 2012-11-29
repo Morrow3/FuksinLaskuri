@@ -8,7 +8,7 @@ varmista();
    <body>
         <div>
             <h1>Lisää juoma</h1>
-            <a href="valikkosivu.php">Palaa takaisin (väliaikainen)</a>
+            <a href="valikkosivu.php">Palaa takaisin</a>
             <p>Voit lisätä uuden juoman täyttämällä alla olevan lomakkeen.
             Ainoa pakollinen tieto on juodun juoman laatu.</p>
         </div>

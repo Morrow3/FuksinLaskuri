@@ -25,7 +25,7 @@ class Kyselyt
         }
         else
         {
-            echo 'VIRHE!';
+            
             return null;
         }
     }
@@ -67,6 +67,12 @@ class Kyselyt
             ':juoman_maara'=>$maara, ':milloin_juotu'=>$monelta , ':missa_juotu'=>$missa, ':juoman_hinta'=>$hinta ));
     }
     
+    public function poista_juoma($kayttaja_id, $juoman_id)
+    {
+        $kysely = $this->valmistele("DELETE FROM juomat WHERE id = ? and kayttaja_id = ?");
+        $kysely->execute(array($juoman_id, $kayttaja_id));
+    }
+            
     //Listaa juodut juomat id-numeron perusteella.
     public function listaa_juomat($tunnus)
     {
@@ -92,7 +98,7 @@ class Kyselyt
         echo "<td>" . $rivi["milloin_juotu"] . "</td>";
         echo "<td>" . $rivi["missa_juotu"] . "</td>";
         echo "<td>" . $rivi["juoman_hinta"] . "</td>";
-        echo "<td>" . "<a href='poistatuote.php?id=".$id."'>[poista]</a></td>";
+        echo "<td>" . "<a href='poistajuoma.php?id=".$id."'>[poista]</a></td>";
         echo "</tr>"; 
         }
         echo "</table>";

@@ -21,6 +21,5 @@ include_once 'ylaosa.php';
             <br>
             <input type="submit" name="Submit" value="Submit"/>
         </form>
-        <a href="valikkosivu.php">Väliaikainen linkki..</a>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 $otsikko = 'Kirjautuminen';
-include_once"ylaosa.php";
+include "ylaosa.php";
+require "kyselyt.php";
 ?>
    <body>
         <div>
