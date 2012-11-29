@@ -78,7 +78,7 @@ class Kyselyt
     {
         $kysely = $this->valmistele("SELECT * FROM juomat WHERE kayttaja_id = ?");
         $kysely->execute(array($tunnus));
- 
+        
         echo "<table border>";
         echo "<tr>";
         echo "<th> käyttäjä nro. </th>";

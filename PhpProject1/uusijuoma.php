@@ -25,6 +25,7 @@ varmista();
 
             <label>Hinta:</label>
             <input type="text" name="hinta"/>
+            <b>€</b>
             <br />
             
             <label>Määrä:</label>
