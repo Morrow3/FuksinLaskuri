@@ -81,7 +81,6 @@ class Kyselyt
         
         echo "<table border>";
         echo "<tr>";
-        echo "<th> käyttäjä nro. </th>";
         echo "<th> Juoman tyyppi </th>";
         echo "<th> Juoman määrä </th>";
         echo "<th> Milloin juotu </th>";
@@ -92,7 +91,6 @@ class Kyselyt
         while ($rivi = $kysely->fetch()) {
             $id = $rivi['id'];
         echo "<tr>";
-        echo "<td>" . $rivi["kayttaja_id"] . "</td>";
         echo "<td>" . $rivi["juoman_tyyppi"] . "</td>";
         echo "<td>" . $rivi["juoman_maara"] . "</td>";
         echo "<td>" . $rivi["milloin_juotu"] . "</td>";
